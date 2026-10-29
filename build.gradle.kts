@@ -4,12 +4,17 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven("https://jitpack.io")
+        maven("https://jitpack.io") {
+            content {
+                includeGroup("com.github.lagradost")
+                includeGroup("com.github.recloudstream")
+            }
+        }
     }
 
     dependencies {
         classpath("com.android.tools.build:gradle:7.0.4")
-        classpath("com.github.lagradost:cloudstream3-gradle-plugin:master-SNAPSHOT")
+        classpath("com.github.recloudstream:gradle:3.0.1")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
     }
 }
