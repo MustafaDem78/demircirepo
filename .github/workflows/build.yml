@@ -38,7 +38,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/src
           chmod +x gradlew
-          ./gradlew makePluginsJson
+          ./gradlew makePluginsJson --no-daemon
           mkdir -p $GITHUB_WORKSPACE/builds
           cp -f build/*.cs3 $GITHUB_WORKSPACE/builds/ 2>/dev/null || true
           cp -f build/plugins.json $GITHUB_WORKSPACE/builds/repo.json 2>/dev/null || cp -f build/plugins.json $GITHUB_WORKSPACE/builds/ 2>/dev/null || true
