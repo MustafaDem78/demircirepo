@@ -10,5 +10,6 @@ class TestPlugin: Plugin() {
         // All providers should be added in this manner. Please don't edit the providers list directly.
         registerMainAPI(FullHDFilmizleseneProvider())
         registerMainAPI(HDFilmCehennemiProvider())
+        registerMainAPI(DizipalProvider())
     }
 }
